@@ -18,19 +18,12 @@ public class Application {
             System.out.println("0. 종료");
             System.out.print("선택: ");
 
-<<<<<<< HEAD
 
-=======
->>>>>>> c64da463ac8f4a8bbb707a34b7947ed0dfc1c0c3
             int choice = scanner.nextInt();
             scanner.nextLine(); // 개행 문자 처리
 
             switch (choice) {
-<<<<<<< HEAD
                 case 1 -> showMenu(connection);
-=======
-                case 1 -> startUserManagement(connection);
->>>>>>> c64da463ac8f4a8bbb707a34b7947ed0dfc1c0c3
                 case 0 -> {
                     connection.close();
                     System.out.println("프로그램을 종료합니다.");
@@ -41,29 +34,9 @@ public class Application {
         }
     }
 
-<<<<<<< HEAD
     private static void showMenu(Connection connection) {
         new UserView(connection).showMenu();
     }
 }
 
 
-=======
-    private static void startLessonManagement(Connection connection) {
-    }
-
-    private static void startRoleManagement(Connection connection) {
-    }
-
-
-    /**
-     * 사용자(User) 관리 시작
-     * - 사용자(User) 관련 기능 실행
-     */
-    private static void startUserManagement(Connection connection) {
-
-    }
-
-}
-
->>>>>>> c64da463ac8f4a8bbb707a34b7947ed0dfc1c0c3
