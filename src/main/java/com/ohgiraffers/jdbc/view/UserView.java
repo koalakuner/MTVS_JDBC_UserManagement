@@ -25,18 +25,27 @@ public class UserView {
         while (true) {
             System.out.println("=======사용자 관리 시스템=======");
             System.out.println("1. 전체 사용자 조회");
+<<<<<<< HEAD
             System.out.println("2. 사용자 상세 조회 (ID)");
             System.out.println("3. 사용자 등록");
             System.out.println("4. 사용자 수정");
             System.out.println("5. 사용자 삭제");
             System.out.println("0. 종료");
             System.out.print("선택: ");
+=======
+            System.out.println("3. 사용자 조회 (ID)");
+            System.out.println("4. 사용자 수정");
+            System.out.println("5. 사용자 삭제");
+            System.out.println("0. 종료");
+            System.out.print("선택하세요: ");
+>>>>>>> c64da463ac8f4a8bbb707a34b7947ed0dfc1c0c3
 
             int choice = scanner.nextInt(); // 사용자로부터 메뉴 선택을 입력받음
             scanner.nextLine();
 
             switch (choice) {  // 사용자의 선택에 따라 다른 기능을 수행
                 case 1:
+<<<<<<< HEAD
                     getAllUsers();//
                     break;
                 case 2:
@@ -54,6 +63,17 @@ public class UserView {
                 case 5:
                     deleteUser();
                     break;
+=======
+                    getAllUsers();// 전체 사용자 조회
+                case 2:
+                    registerUser();// 사용자 등록
+                case 3:
+                    getUserById();
+                case 4:
+                    updateUser();
+                case 5:
+                    deleteUser();
+>>>>>>> c64da463ac8f4a8bbb707a34b7947ed0dfc1c0c3
                 case 0: { // 프로그램 종료
                     System.out.println("프로그램을 종료합니다");
                     return;
@@ -113,7 +133,11 @@ public class UserView {
 
 
     // [ 단일(상세) 사용자 조회]
+<<<<<<< HEAD
     private void getUserById(int userId) {  // ID 입력받음.
+=======
+    private void getUserById() {  // ID 입력받음.
+>>>>>>> c64da463ac8f4a8bbb707a34b7947ed0dfc1c0c3
         System.out.println("조회할 사용자 ID를 입력하세요: ");
         int useId = scanner.nextInt();
         scanner.nextLine();
@@ -145,6 +169,7 @@ public class UserView {
         String password = scanner.nextLine();
 
         System.out.print("새로운 역할 ID: ");
+<<<<<<< HEAD
 
         int roleId;
         try {
@@ -155,6 +180,10 @@ public class UserView {
             scanner.nextLine(); // 입력 버퍼 비우기
             return;
         }
+=======
+        int roleId = scanner.nextInt();
+        scanner.nextLine();
+>>>>>>> c64da463ac8f4a8bbb707a34b7947ed0dfc1c0c3
 
         User user = new User(userId, username, email, password, roleId);
         try {
